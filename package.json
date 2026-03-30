@@ -4,7 +4,7 @@
   "description": "Este repositorio corresponde a la **Clase 2 del Módulo 7** del curso.\r El objetivo es aplicar los conceptos vistos en clase y reforzar el aprendizaje práctico.",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --env-file=.env -src/index.js",
+    "dev": "nodemon --env-file=.env src/index.js",
     "start": "node ./src/index.js"
   },
   "keywords": [],
