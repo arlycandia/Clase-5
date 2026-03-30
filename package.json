@@ -1,0 +1,25 @@
+{
+  "name": "clase5",
+  "version": "1.0.0",
+  "description": "Este repositorio corresponde a la **Clase 2 del Módulo 7** del curso.\r El objetivo es aplicar los conceptos vistos en clase y reforzar el aprendizaje práctico.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --env-file=.env -src/index.js",
+    "start": "node ./src/index.js"
+  },
+  "keywords": [],
+  "author": "Arly Candia",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-handlebars": "^8.0.7",
+    "pg": "^8.20.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.8"
+  },
+  "devDependencies": {
+    "dotenv": "^17.3.1",
+    "nodemon": "^3.1.14"
+  }
+}
