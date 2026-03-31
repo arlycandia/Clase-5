@@ -1,3 +1,5 @@
+import { Course, Category } from "../models/index.js";
+
 export const home = (req, res) => {
   try {
     res.render("home", {});
