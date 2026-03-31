@@ -1,5 +1,4 @@
 import { DataTypes } from "sequelize";
-import Sequelize from "../config/db.js";
 import sequelize from "../config/db.js";
 
 const Course = sequelize.define(
@@ -7,11 +6,11 @@ const Course = sequelize.define(
   {
     id: {
       type: DataTypes.INTEGER,
-      PrimaryKey: true,
+      primaryKey: true,
       autoIncrement: true,
     },
     title: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(60),
       allowNull: false,
     },
     price: {
@@ -20,7 +19,7 @@ const Course = sequelize.define(
     },
   },
   {
-    timestamps: true, //crear una columna llamada createAT y undateAT
+    timestamps: true, //crear una columna llamada createAt y updateAT
   },
 );
 

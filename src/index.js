@@ -19,17 +19,15 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "src/public")));
 
 //Sincronización de BBDD
-
 const connectDB = async () => {
   try {
     await db.sync();
-    console.log("Base de datos Sincronizaso");
+    console.log("✅ Base de Datos Sincronizada");
   } catch (error) {
-    console.error("Error General", error);
+    console.error("❌ Error general", error);
   }
 };
-
-connectDB;
+connectDB();
 
 //Configuración de HBS
 app.set("view engine", "hbs");

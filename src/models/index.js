@@ -1,12 +1,12 @@
-import Course from "../models/Course.js";
+import Course from "./Courses.js";
 import Category from "./Category.js";
 
-// Relacion 1 a muchos
-// Una Categoria tiene muchos cursos
+//Relacion 1 a muchos
+//una categoria tiene muchos cursos
 
-Course.hasMany(Category, { foreignKey: "CategoryID", onDelete: "CASCADE " });
+Category.hasMany(Course, { foreignKey: "categoryID", onDelete: "CASCADE" });
 
-// UN CURSO PERTENECE
+//un curso pertenece a una categoria
 
 Course.belongsTo(Category, { foreignKey: "categoryID" });
 
