@@ -60,3 +60,16 @@ export const createCourse = async (req, res) => {
     res.status(500).send("Error al guardar categoria");
   }
 };
+
+// 5. Eliminar los cursos
+
+export const deleteCourse = async (req, res) => {
+  try {
+    const { id } = req.params;
+    await Course.destroy({ where: { id } });
+    res.redirect("/");
+  } catch (error) {
+    console.error("Error al Eliminar:", error);
+    res.status(500).send("Error al eliminar el curso");
+  }
+};

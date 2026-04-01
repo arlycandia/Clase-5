@@ -5,6 +5,7 @@ import {
   getCreateCourseForm,
   createCategory,
   createCourse,
+  deleteCourse,
 } from "../controller/courseController.js";
 
 const router = express.Router();
@@ -16,5 +17,7 @@ router.post("/create-category", createCategory); //Guarda el formulario de categ
 
 router.get("/create", getCreateCourseForm); //mostrar el formulario de cursos
 router.post("/create-course", createCourse); //guardar el curso
+
+router.post("/eliminar/:id", deleteCourse); //ruta para eliminar un curso
 
 export default router;

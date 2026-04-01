@@ -13,6 +13,10 @@ const Course = sequelize.define(
       type: DataTypes.STRING(60),
       allowNull: false,
     },
+    description: {
+      type: DataTypes.STRING(200),
+      allowNull: false,
+    },
     price: {
       type: DataTypes.INTEGER,
       allowNull: false,
